@@ -1,25 +1,17 @@
 /*
- * OAT 2.0 template
+ * OAT 2.0
+ * pseudo-pattern
  *
- * @OAT
+ * jQuery version
  *
- */
-
-/*
- *
- * OAT pseudo-pattern
- * inspired by Douglas Crockford’s  functional Object pattern
-
  * Name : Object App Template ( OAT )
  * Classification : Structural
- * Description :
-
- * Provides a simplified and easy to read template for large bodies of code, contained by a specific context.
- * Creates private variables accessible to all methods inside the specific context.
- * Sets a common language template for variables inside each object.
- * Stores the common denominator functions for all the apps in one script file, page or module. ( helpers )
-
+ *
 */
+
+
+
+
 
 (function(){
 
@@ -27,14 +19,18 @@
 
     var OAT = function( options ){
     
-	// Inherited object
 	options = options || {};
     
-	// Add any recurring settings inside the oat settings
+	// Add any recurring script settings inside the oat settings or ater them 
+	// when initializing the OAT inside the app
 	var that = {
 	    settings : {
 		templateLocationId : null,
 		templateTargetId : null,
+		// Create an abstraction on top of jQuery's ajax 
+		// method to set your projects most recurring options as default.
+		// using the helper ajax request to set recurring callback methods
+		// for erros, timeouts etc...
 		ajaxSettings : {
 		    url : '/init_ajax/',
 		    type : 'get',
@@ -49,8 +45,8 @@
 	};
     
     
-	// Merge the spec ( inherited object ) with the settings object
-	that.settings = $.extend( true, that.settings, spec )
+	// Merge the options ( inherited object ) with the settings object
+	that.settings = $.extend( true, that.settings, options )
     
 	// Add all the shared helper methods 
 	that.helper = {
