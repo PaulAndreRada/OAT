@@ -2,7 +2,6 @@
 OAT.js
 ===
 pseudo-pattern
-
 Name : Object App Template [ OAT ]
 
 Classification : Structural
@@ -16,7 +15,10 @@ A design pattern intended to streamline the javascript module writing process [ 
 <li>  Creates private variables accessible to all methods inside the specific context.</li>
 <li>  Sets a common language template for variables inside each object. </li>
 <li>   Stores the common denominator functions for all the apps in one script file, page or module. ( helpers ) </li>
-/ul>
+</ul>	
+	
+	
 
 
-* inspired by Douglas Crockford’s  functional Object pattern
+
+inspired by Douglas Crockford’s functional Object pattern
