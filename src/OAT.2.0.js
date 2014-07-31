@@ -9,14 +9,14 @@
  *
  * Description :
  * 
- *  A design pattern intended to streamline the writing process javascript modules [ for front end apps ],
+ *  A design pattern intended to streamline the writing process of javascript modules [ for front end apps ],
  *  reducing redundancy by abstracting the most used settings and helper functions. 
  *  The pattern is designed to be implemented in a readable stream of functions, organized in object literal notation.
  *  It is currently illustrated using several jQuery Methods but the pattern could easily be made into a stand alone 
- *  app by replacing the $.extend method by using custom functions
+ *  app by replacing the $.extend method with custom functions
  *
  *    - Provides a simplified and easy to read template for large bodies of code, contained by a specific context.
- *    - Creates private variables accessible to all methods inside the specific context.
+ *    - Creates pseudo-private variables accessible to all methods inside the specific context.
  *    - Sets a common language template for variables inside each object.
  *    - Stores the common denominator functions for all the apps in one script file, page or module. ( helpers )
  * 
